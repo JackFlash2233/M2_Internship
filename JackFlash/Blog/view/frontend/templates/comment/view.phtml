@@ -1,0 +1,16 @@
+<?php
+/** @var JackFlash\Blog\Block\Comment $block */
+
+$tmp = $block->getComment();
+?>
+
+article_id:
+<?=  $tmp->getData('article_id') ?> <br>
+author:
+<?=  $tmp->getData('author') ?> <br>
+Url:
+<?= $tmp->getData('url')?> <br>
+content:
+<?=  $tmp->getData('content') ?> <br>
+enabled:
+<?=  $tmp->getData('enabled') ?> <br>

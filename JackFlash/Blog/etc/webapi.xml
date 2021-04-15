@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+
+<!--    Article-->
+<!--    <route method="GET" url="/V1/article/:entity_id">-->
+<!--        <service class="JackFlash\Blog\Api\ArticleRepositoryInterface" method="getById"/>-->
+<!--        <resources>-->
+<!--            <resource ref="JackFlash_Blog::article"/>-->
+<!--        </resources>-->
+<!--    </route>-->
+<!--    <route method="POST" url="/V1/article">-->
+<!--        <service class="JackFlash\Blog\Api\ArticleRepositoryInterface" method="save"/>-->
+<!--        <resources>-->
+<!--            <resource ref="anonymous"/>-->
+<!--        </resources>-->
+<!--    </route>-->
+<!--    <route method="PUT" url="/V1/article/:entity_id">-->
+<!--        <service class="JackFlash\Blog\Api\ArticleRepositoryInterface" method="save"/>-->
+<!--        <resources>-->
+<!--            <resource ref="JackFlash_Blog::article"/>-->
+<!--        </resources>-->
+<!--    </route>-->
+<!--    <route method="DELETE" url="/V1/article/:entity_id">-->
+<!--        <service class="JackFlash\Blog\Api\ArticleRepositoryInterface" method="deleteById"/>-->
+<!--        <resources>-->
+<!--            <resource ref="JackFlash_Blog::article"/>-->
+<!--        </resources>-->
+<!--    </route>-->
+
+<!--&lt;!&ndash;    Comment&ndash;&gt;-->
+
+<!--    <route method="GET" url="/V1/comment/:entity_id">-->
+<!--        <service class="JackFlash\Blog\Api\CommentRepositoryInterface" method="getById"/>-->
+<!--        <resources>-->
+<!--            <resource ref="JackFlash_Blog::comment"/>-->
+<!--        </resources>-->
+<!--    </route>-->
+<!--    <route method="POST" url="/V1/comment">-->
+<!--        <service class="JackFlash\Blog\Api\CommentRepositoryInterface" method="save"/>-->
+<!--        <resources>-->
+<!--            <resource ref="JackFlash_Blog::comment"/>-->
+<!--        </resources>-->
+<!--    </route>-->
+<!--    <route method="PUT" url="/V1/comment/:entity_id">-->
+<!--        <service class="JackFlash\Blog\Api\CommentRepositoryInterface" method="save"/>-->
+<!--        <resources>-->
+<!--            <resource ref="JackFlash_Blog::comment"/>-->
+<!--        </resources>-->
+<!--    </route>-->
+<!--    <route method="DELETE" url="/V1/comment/:entity_id">-->
+<!--        <service class="JackFlash\Blog\Api\CommentRepositoryInterface" method="deleteById"/>-->
+<!--        <resources>-->
+<!--            <resource ref="JackFlash_Blog::comment"/>-->
+<!--        </resources>-->
+<!--    </route>-->
+</routes>

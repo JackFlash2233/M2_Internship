@@ -1,0 +1,14 @@
+{
+    "test_test_car": {
+        "column": {
+            "entity_id": true,
+            "car": true,
+            "model": true,
+            "description": true,
+            "price": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

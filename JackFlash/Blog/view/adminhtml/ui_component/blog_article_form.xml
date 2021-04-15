@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">
+                blog_article_form.jackflash_blog_article_listing_articles_data_source
+            </item>
+            <item name="deps" xsi:type="string">blog_article_form.jackflash_blog_article_listing_articles_data_source
+            </item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Article Form</item>
+        <item name="layout" xsi:type="array">
+            <item name="type" xsi:type="string">tabs</item>
+        </item>
+
+        <item name="buttons" xsi:type="array">
+            <item name="back" xsi:type="string">JackFlash\Blog\Block\Adminhtml\Edit\BackButton</item>
+            <!--            <item name="delete" xsi:type="string">JackFlash\Blog\Block\Adminhtml\Edit\DeleteButton</item>-->
+            <item name="save" xsi:type="string">JackFlash\Blog\Block\Adminhtml\Edit\SaveButton</item>
+        </item>
+    </argument>
+
+    <dataSource name="jackflash_blog_article_listing_articles_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="blog/index/save"/>
+        </settings>
+        <dataProvider class="JackFlash\Blog\Model\DataProvider"
+                      name="jackflash_blog_article_listing_articles_data_source">
+            <settings>
+                <requestFieldName>entity_id</requestFieldName>
+                <primaryFieldName>entity_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+
+        <!--        <argument name="dataProvider" xsi:type="configurableObject">-->
+        <!--            <argument name="class" xsi:type="string">JackFlash\Blog\Model\DataProvider</argument>-->
+        <!--            &lt;!&ndash;            <argument name="class" xsi:type="string">&ndash;&gt;-->
+        <!--            &lt;!&ndash;                Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider&ndash;&gt;-->
+        <!--            &lt;!&ndash;            </argument>&ndash;&gt;-->
+        <!--            <argument name="name" xsi:type="string">jackflash_blog_article_listing_articles_data_source</argument>-->
+        <!--            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>-->
+        <!--            <argument name="requestFieldName" xsi:type="string">id</argument>-->
+        <!--            <argument name="data" xsi:type="array">-->
+        <!--                <item name="config" xsi:type="array">-->
+        <!--                    <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>-->
+        <!--                    <item name="update_url" xsi:type="url" path="mui/index/render"/>-->
+        <!--                    <item name="storageConfig" xsi:type="array">-->
+        <!--                        <item name="indexField" xsi:type="string">entity_id</item>-->
+        <!--                    </item>-->
+        <!--                </item>-->
+        <!--            </argument>-->
+        <!--        </argument>-->
+    </dataSource>
+
+    <fieldset name="article">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Article</item>  <!-- edit -->
+            </item>
+        </argument>
+
+        <field name="entity_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">false</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">articles</item>
+                </item>
+            </argument>
+        </field>
+        <field name="author">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Author</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">articles</item>
+                </item>
+            </argument>
+        </field>
+        <field name="title">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Title</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">articles</item>
+                </item>
+            </argument>
+        </field>
+        <field name="description">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Description</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">articles</item>
+                </item>
+            </argument>
+        </field>
+        <field name="content">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Content</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item> <!-- select ir text -->
+                    <item name="source" xsi:type="string">articles</item>
+                </item>
+            </argument>
+        </field>
+        <field name="status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">status</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="options" xsi:type="array">
+                        <item name="0" xsi:type="array">
+                            <item name="value" xsi:type="string">0</item>
+                            <item name="label" xsi:type="string">Disabled</item>
+                        </item>
+                        <item name="1" xsi:type="array">
+                            <item name="value" xsi:type="string">1</item>
+                            <item name="label" xsi:type="string">Enabled</item>
+                        </item>
+                    </item>
+                    <item name="source" xsi:type="string">articles</item>
+                </item>
+            </argument>
+        </field>
+        <field name="enabled">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">enabled</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="options" xsi:type="array">
+                        <item name="0" xsi:type="array">
+                            <item name="value" xsi:type="string">0</item>
+                            <item name="label" xsi:type="string">No</item>
+                        </item>
+                        <item name="1" xsi:type="array">
+                            <item name="value" xsi:type="string">1</item>
+                            <item name="label" xsi:type="string">Yes</item>
+                        </item>
+                    </item>
+                    <item name="source" xsi:type="string">articles</item>
+                </item>
+            </argument>
+        </field>
+        <field name="url">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Url</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">articles</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>

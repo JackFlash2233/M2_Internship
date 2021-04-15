@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Test_Test::cars" title="Cars" module="Test_Test" sortOrder="51" resource="Test_Test::cars"/>
+<!--        <add id="JackFlash_Blog::articles_items" title="Articles Items" module="JackFlash_Blog" sortOrder="10" action="blog/index" resource="JackFlash_Blog::articles_items" parent="JackFlash_Blog::articles"/>-->
+    </menu>
+</config>

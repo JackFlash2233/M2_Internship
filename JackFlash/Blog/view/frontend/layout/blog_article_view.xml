@@ -1,0 +1,16 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header-wrapper" remove="true">
+            <referenceBlock name="navigation.sections" remove="true" />
+        </referenceContainer>
+
+
+        <referenceContainer name="content">
+            <block class="JackFlash\Blog\Block\Blog" name="blog" as="blog" template="article/view.phtml"/>
+        </referenceContainer >
+
+        <referenceContainer name="footer" remove="true">
+        </referenceContainer>
+
+    </body>
+</page>

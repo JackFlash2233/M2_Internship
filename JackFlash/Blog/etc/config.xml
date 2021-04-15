@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <sales>
+            <custom_discount>
+                <value>100</value>
+            </custom_discount>
+            <sku>
+                <value>GIFT</value>
+            </sku>
+        </sales>
+        <checkout>
+            <test_group1>
+                  <test1>name2</test1>
+                  <test2>name1</test2>
+                  <test3>Test3</test3>
+                  <test4>Test4</test4>
+                  <test5>Test5</test5>
+                  <test6>Test6</test6>
+                  <test7>Test7</test7>
+            </test_group1>
+            <test_group2>
+                <test11>Test11</test11>
+                <test12>Test12</test12>
+                <test13>Test13</test13>
+                <test14>Test14</test14>
+                <test15>Test15</test15>
+                <test16>Test16</test16>
+                <test17>Test17</test17>
+            </test_group2>
+        </checkout>
+    </default>
+</config>
