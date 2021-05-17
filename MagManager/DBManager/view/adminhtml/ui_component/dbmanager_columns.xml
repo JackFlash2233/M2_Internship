@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">dbmanager_columns.db_columns_source</item>
+            <item name="deps" xsi:type="string">dbmanager_columns.db_columns_source</item>
+        </item>
+        <item name="spinner" xsi:type="string">columns</item>
+        <item name="buttons" xsi:type="array">
+            <item name="back" xsi:type="string">
+                MagManager\DBManager\Block\Adminhtml\DBManager\Edit\BackButton
+            </item>
+            <item name="delete" xsi:type="string">MagManager\DBManager\Block\Adminhtml\DBManager\Edit\DeleteButton</item>
+            <item name="add_column" xsi:type="array">
+                <item name="name" xsi:type="string">add</item>
+                <item name="label" xsi:type="string" translate="true">Add New Column</item>
+                <item name="class" xsi:type="string">primary</item>
+                <item name="url" xsi:type="string">*/*/NewColumn</item>
+            </item>
+            <item name="edit_tname" xsi:type="array">
+                <item name="name" xsi:type="string">add</item>
+                <item name="label" xsi:type="string" translate="true">Edit table name</item>
+                <item name="url" xsi:type="string">*/*/EditTableName</item>
+            </item>
+        </item>
+    </argument>
+    <dataSource name="db_columns_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">MagManager\DBManager\Model\ColumnsDataProvider</argument>
+            <argument name="name" xsi:type="string">db_columns_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="requestFieldName" xsi:type="string">entity_id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+                    <item name="update_url" xsi:type="url" path="mui/index/render"/>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="indexField" xsi:type="string">entity_id</item>
+                    </item>
+                </item>
+            </argument>
+        </argument>
+    </dataSource>
+    <!--    <columns name="columns" class="MagManager\DBManager\Ui\Component\Column">-->
+    <columns name="columns">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="editorConfig" xsi:type="array">
+                    <item name="selectProvider" xsi:type="string">
+                        dbmanager_columns.dbmanager_columns.columns.ids
+                    </item>
+                    <item name="enabled" xsi:type="boolean">true</item>
+                    <item name="indexField" xsi:type="string">entity_id</item>
+                    <item name="clientConfig" xsi:type="array">
+                        <item name="saveUrl" xsi:type="url" path="*/*/inlineEdit"/>
+                        <item name="validateBeforeSave" xsi:type="boolean">false</item>
+                        <!--                        <item name="validateUrl" xsi:type="url" path="*/*/checkData"/>-->
+                    </item>
+                </item>
+                <item name="childDefaults" xsi:type="array">
+                    <item name="fieldAction" xsi:type="array">
+                        <item name="provider" xsi:type="string">
+                            dbmanager_columns.dbmanager_columns.columns_editor
+                        </item>
+                        <item name="target" xsi:type="string">startEdit</item>
+                        <item name="params" xsi:type="array">
+                            <item name="0" xsi:type="string">${ $.$data.rowIndex }</item>
+                            <item name="1" xsi:type="boolean">true</item>
+                        </item>
+                    </item>
+                </item>
+            </item>
+        </argument>
+        <selectionsColumn name="ids" sortOrder="0">
+            <settings>
+                <indexField>entity_id</indexField>
+            </settings>
+        </selectionsColumn>
+        <column name="SCHEMA_NAME">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">SCHEMA_NAME</item>
+                </item>
+            </argument>
+        </column>
+        <column name="TABLE_NAME">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">TABLE_NAME</item>
+                </item>
+            </argument>
+        </column>
+        <column name="COLUMN_NAME">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">COLUMN_NAME</item>
+                </item>
+            </argument>
+        </column>
+        <column name="COLUMN_POSITION">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">COLUMN_POSITION</item>
+                </item>
+            </argument>
+        </column>
+        <column name="DATA_TYPE">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">DATA_TYPE</item>
+                </item>
+            </argument>
+        </column>
+        <column name="DEFAULT">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">DEFAULT</item>
+                </item>
+            </argument>
+        </column>
+        <column name="NULLABLE">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">NULLABLE</item>
+                </item>
+            </argument>
+        </column>
+        <column name="LENGTH">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">LENGTH</item>
+                </item>
+            </argument>
+        </column>
+        <column name="SCALE">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">SCALE</item>
+                </item>
+            </argument>
+        </column>
+        <column name="PRECISION">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">PRECISION</item>
+                </item>
+            </argument>
+        </column>
+        <column name="UNSIGNED">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">UNSIGNED</item>
+                </item>
+            </argument>
+        </column>
+        <column name="PRIMARY">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">PRIMARY</item>
+                </item>
+            </argument>
+        </column>
+        <column name="PRIMARY_POSITION">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">PRIMARY_POSITION</item>
+                </item>
+            </argument>
+        </column>
+        <column name="IDENTITY">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">IDENTITY</item>
+                </item>
+            </argument>
+        </column>
+        <actionsColumn name="actions" class="MagManager\DBManager\Ui\Component\Listing\ColumnsAction"
+                       sortOrder="200">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="indexField" xsi:type="string">entity_id</item>
+                </item>
+            </argument>
+        </actionsColumn>
+    </columns>
+</listing>

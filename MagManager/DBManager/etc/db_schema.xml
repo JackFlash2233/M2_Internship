@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="new_table" resource="default" engine="innodb" comment="for creating Table">
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true"
+                comment="Entity ID"/>
+        <column xsi:type="varchar" name="column_name" nullable="false" length="64" comment="column_name"/>
+        <column xsi:type="varchar" name="column_type" nullable="false" length="64" comment="column_type"/>
+        <column xsi:type="varchar" name="null" nullable="false" length="1024" comment="null or not null"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+    <table name="table_column" resource="default" engine="innodb" comment="for column">
+        <column xsi:type="varchar" name="COLUMN_NAME" nullable="false" length="64" comment="column_name"/>
+        <column xsi:type="varchar" name="data_type" nullable="false" length="64" comment="DATA_TYPE"/>
+        <column xsi:type="varchar" name="nullable" nullable="false" length="64" comment="NULLABLE"/>
+        <column xsi:type="varchar" name="primary" nullable="false" comment="PRIMARY"/>
+    </table>
+
+
+<table name="aatest" resource="default" engine="innodb" comment="Test comment">
+<column xsi:type="smallint" name="testnew12" nullable="true" comment="test"/>
+<column xsi:type="smallint" name="test221" nullable="true" comment="test"/>
+<column xsi:type="smallint" name="2" nullable="true" comment="test"/>
+<column xsi:type="smallint" name="test43663" nullable="true" comment="test"/>
+<column xsi:type="tinyint" name="qwert" nullable="true" comment="test"/>
+</table>
+
+
+<table name="aaaaaaa" resource="default" engine="innodb" comment="Test comment">
+<column xsi:type="text" name="test11220" nullable="true" comment="test"/>
+<column xsi:type="smallint" name="test2" nullable="true" comment="test"/>
+<column xsi:type="smallint" name="test3" nullable="true" comment="test"/>
+<column xsi:type="smallint" name="new1" nullable="true" comment="test"/>
+</table>
+
+
+
+
+<table name="ghkss" resource="default" engine="innodb" comment="test">
+<column xsi:type="date" name="test1" nullable="true" comment="test"/>
+</table>
+
+
+<table name="aatestnewtable" resource="default" engine="innodb" comment="test">
+<column xsi:type="smallint" name="test" nullable="true" comment="test"/>
+</table>
+
+
+
+
+<table name="aaaatest001" resource="default" engine="innodb" comment="test">
+<column xsi:type="date" name="129" nullable="true" comment="test"/>
+<column xsi:type="smallint" name="2" nullable="true" comment="test"/>
+<column xsi:type="date" name="test" nullable="true" comment="test"/>
+</table>
+
+
+
+
+<table name="aa1test1" resource="default" engine="innodb" comment="test">
+<column xsi:type="smallint" name="test12" nullable="true" comment="test"/>
+<column xsi:type="date" name="test5" nullable="true" comment="test"/>
+<column xsi:type="float" name="test2" nullable="true" comment="test"/>
+</table>
+
+
+
+<table name="aspectest11" resource="default" engine="innodb" comment="test">
+<column xsi:type="date" name="test11" nullable="true" comment="test"/>
+<column xsi:type="float" name="test30" nullable="true" comment="test"/>
+<column xsi:type="smallint" name="newtest" nullable="true" comment="test"/>
+</table>
+</schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MagManager_DBManager::databases" title="DataBase" module="MagManager_DBManager" sortOrder="51"
+             resource="MagManager_DBManager::databases"/>
+        <add id="MagManager_DBManager::database_items" title="DataBase Items" module="MagManager_DBManager"
+             sortOrder="10" action="dbmanager/index" resource="MagManager_DBManager::database_items"
+             parent="MagManager_DBManager::databases"/>
+    </menu>
+</config>

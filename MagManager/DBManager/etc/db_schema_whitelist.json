@@ -1,0 +1,126 @@
+{
+    "new_table": {
+        "column": {
+            "entity_id": true,
+            "column_name": true,
+            "column_type": true,
+            "null": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "table_column": {
+        "column": {
+            "COLUMN_NAME": true,
+            "data_type": true,
+            "nullable": true,
+            "primary": true
+        }
+    },
+    "aaaaaaa": {
+        "column": {
+            "test": true,
+            "test2": true,
+            "test3": true,
+            "test11": true,
+            "test112": true,
+            "new1": true,
+            "test11222": true,
+            "test1122": true,
+            "test11220": true
+        }
+    },
+    "aatest": {
+        "column": {
+            "newtest": true,
+            "test22": true,
+            "test221": true,
+            "1": true,
+            "testbdh": true,
+            "test43663": true,
+            "testnew": true,
+            "qwert": true,
+            "2": true,
+            "testnew12": true
+        }
+    },
+    "aaaaaaaadelete": {
+        "column": {
+            "1": true
+        }
+    },
+    "aaaatest1": {
+        "column": {
+            "1": true
+        }
+    },
+    "aaaatest2": {
+        "column": {
+            "1": true
+        }
+    },
+    "ghkss": {
+        "column": {
+            "test1": true
+        }
+    },
+    "aaaatest21": {
+        "column": {
+            "1": true
+        }
+    },
+    "aatestnewtable": {
+        "column": {
+            "test": true
+        }
+    },
+    "aaaatest211": {
+        "column": {
+            "12": true,
+            "2": true
+        }
+    },
+    "aaaatest001": {
+        "column": {
+            "12": true,
+            "2": true,
+            "129": true,
+            "test": true
+        }
+    },
+    "aa1test": {
+        "column": {
+            "test1": true,
+            "test2": true,
+            "test3": true
+        }
+    },
+    "aa1test1": {
+        "column": {
+            "test1": true,
+            "test2": true,
+            "test3": true,
+            "test12": true,
+            "tes1": true,
+            "test5": true
+        }
+    },
+    "aspectest": {
+        "column": {
+            "test1": true,
+            "test2": true,
+            "test3": true
+        }
+    },
+    "aspectest11": {
+        "column": {
+            "test1": true,
+            "test2": true,
+            "test3": true,
+            "test11": true,
+            "test30": true,
+            "newtest": true
+        }
+    }
+}

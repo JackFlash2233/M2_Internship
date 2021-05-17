@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="MagManager\DBManager\Model\NewTableDataProvider">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="dbmanager_data_source" xsi:type="string">MagManager\DBManager\Model\ResourceModel\UniversalModel\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <preference for="MagManager\DBManager\Api\NewTableRepositoryInterface"
+                type="MagManager\DBManager\Model\NewTableRepository"/>
+    <preference for="MagManager\DBManager\Api\Data\NewTableInterface" type="MagManager\DBManager\Model\NewTableModel"/>
+    <preference for="MagManager\DBManager\Api\Data\NewTableSearchResultInterface"
+                type="MagManager\DBManager\Model\NewTableSearchResult"/>
+</config>
